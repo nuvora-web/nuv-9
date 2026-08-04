@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog NUVORA — Ideas sobre silencio, comodidad y estilo</title>
+<meta name="description" content="Blog de NUVORA: artículos sobre el impacto del ruido al caminar, comodidad de largo alcance y diseño minimalista aplicado al calzado.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --negro:#0b0b0c; --negro-2:#151517; --rojo:#c1121f; --rojo-vivo:#e5383b;
+    --hueso:#f4f1ea; --gris:#8a8a8f; --linea: rgba(244,241,234,0.12);
+    --font-display:'Bebas Neue',sans-serif; --font-body:'Inter',sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--negro);color:var(--hueso);font-family:var(--font-body);line-height:1.6;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:980px;margin:0 auto;padding:0 32px;}
+  h1,h2,h3{font-family:var(--font-display);text-transform:uppercase;line-height:1;}
+  header{padding:24px 0;border-bottom:1px solid var(--linea);}
+  .nav{display:flex;justify-content:space-between;align-items:center;max-width:980px;margin:0 auto;padding:0 32px;}
+  .logo{font-family:var(--font-display);font-size:1.5rem;}
+  .logo span{color:var(--rojo-vivo);}
+  .back{font-size:.82rem;font-weight:600;color:var(--gris);}
+  .back:hover{color:var(--rojo-vivo);}
+  .hero-blog{padding:90px 0 60px;border-bottom:1px solid var(--linea);}
+  .eyebrow{color:var(--rojo-vivo);text-transform:uppercase;letter-spacing:.24em;font-size:.72rem;font-weight:700;}
+  .hero-blog h1{font-size:clamp(2.6rem,6vw,4.2rem);margin-top:12px;}
+  .hero-blog p{color:var(--gris);max-width:520px;margin-top:16px;}
+  .posts{padding:70px 0;display:flex;flex-direction:column;gap:0;}
+  .post{
+    display:grid;grid-template-columns:120px 1fr auto;gap:28px;align-items:center;
+    padding:32px 0;border-bottom:1px solid var(--linea);
+  }
+  .post:first-child{padding-top:0;}
+  .post-thumb{
+    width:100px;height:70px;background:var(--negro-2);border:1px solid var(--linea);
+    border-radius:4px;display:flex;align-items:center;justify-content:center;padding:10px;
+  }
+  .post-thumb svg{width:100%;height:100%;}
+  .post-body h2{font-family:var(--font-body);font-weight:700;text-transform:none;font-size:1.3rem;margin-bottom:8px;}
+  .post-body p{color:var(--gris);font-size:.94rem;max-width:560px;}
+  .tag{
+    display:inline-block;margin-top:10px;font-size:.7rem;text-transform:uppercase;letter-spacing:.06em;
+    color:var(--rojo-vivo);border:1px solid var(--rojo-vivo);padding:4px 10px;border-radius:20px;
+  }
+  .post-cta{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;white-space:nowrap;}
+  .post-cta:hover{color:var(--rojo-vivo);}
+  footer{border-top:1px solid var(--linea);padding:32px 0;text-align:center;color:var(--gris);font-size:.8rem;}
+  @media(max-width:640px){
+    .post{grid-template-columns:70px 1fr;gap:16px;}
+    .post-cta{grid-column:1/-1;}
+    .post-thumb{width:70px;height:52px;}
+  }
+</style>
+</head>
+<body>
+
+<svg style="position:absolute;width:0;height:0;overflow:hidden;" aria-hidden="true">
+<defs>
+  <symbol id="ilu-wave" viewBox="0 0 400 160">
+    <g fill="#c1121f">
+      <rect x="20" y="55" width="10" height="50" rx="3"/>
+      <rect x="42" y="40" width="10" height="80" rx="3"/>
+      <rect x="64" y="65" width="10" height="30" rx="3"/>
+      <rect x="86" y="30" width="10" height="100" rx="3"/>
+      <rect x="108" y="50" width="10" height="60" rx="3"/>
+    </g>
+    <g fill="#e5383b" opacity="0.55">
+      <rect x="140" y="62" width="9" height="36" rx="3"/>
+      <rect x="160" y="70" width="9" height="20" rx="3"/>
+    </g>
+    <g fill="#8a8a8f" opacity="0.35">
+      <rect x="182" y="75" width="8" height="10" rx="2"/>
+      <rect x="200" y="77" width="7" height="6" rx="2"/>
+    </g>
+    <circle cx="230" cy="80" r="2" fill="#8a8a8f" opacity="0.4"/>
+    <circle cx="255" cy="80" r="2" fill="#8a8a8f" opacity="0.25"/>
+    <circle cx="280" cy="80" r="2" fill="#8a8a8f" opacity="0.12"/>
+  </symbol>
+  <symbol id="ilu-sole" viewBox="0 0 400 200">
+    <path d="M40,60 Q200,40 360,60 L360,80 Q200,62 40,80 Z" fill="#e5383b" opacity="0.9"/>
+    <path d="M40,80 Q200,62 360,80 L360,120 Q200,104 40,120 Z" fill="#1d1d1f" stroke="#3a3a3d" stroke-width="1"/>
+    <path d="M40,120 Q200,104 360,120 L360,150 Q200,136 40,150 Z" fill="#c1121f"/>
+    <path d="M40,150 Q200,136 360,150 L360,165 Q200,152 40,165 Z" fill="#141416" stroke="#3a3a3d" stroke-width="1"/>
+    <g stroke="#f4f1ea" stroke-width="0.75" opacity="0.5">
+      <line x1="375" y1="70" x2="390" y2="70"/>
+      <line x1="375" y1="100" x2="390" y2="100"/>
+      <line x1="375" y1="135" x2="390" y2="135"/>
+      <line x1="375" y1="157" x2="390" y2="157"/>
+    </g>
+  </symbol>
+  <symbol id="ilu-shoe" viewBox="0 0 520 260">
+    <path d="M78,183 C 68,160 70,125 88,105 C 95,97 105,92 118,90 C 130,86 145,84 160,86 C 185,90 205,88 225,82 C 260,74 300,72 335,76 C 375,82 410,95 435,112 C 452,124 463,138 468,155 C 471,167 470,177 462,183 L 78,183 Z" fill="#141416" stroke="#e5383b" stroke-width="2"/>
+    <path d="M78,183 L462,183 C 478,184 490,190 490,199 C 490,208 478,214 462,214 L 78,214 C 62,214 50,208 50,199 C 50,190 62,184 78,183 Z" fill="#c1121f" stroke="#c1121f" stroke-width="2"/>
+    <g stroke="#f4f1ea" stroke-width="1.5" opacity="0.65">
+      <line x1="170" y1="90" x2="145" y2="140"/>
+      <line x1="190" y1="86" x2="165" y2="136"/>
+      <line x1="210" y1="84" x2="185" y2="132"/>
+      <line x1="230" y1="84" x2="208" y2="128"/>
+    </g>
+    <path d="M400,110 C 420,120 445,135 458,152" fill="none" stroke="#f4f1ea" stroke-width="1" opacity="0.4"/>
+  </symbol>
+</defs>
+</svg>
+
+<header>
+  <div class="nav">
+    <a href="index.html" class="logo">NUV<span>O</span>RA</a>
+    <a href="index.html" class="back">← Volver al sitio</a>
+  </div>
+</header>
+
+<section class="hero-blog">
+  <div class="wrap">
+    <span class="eyebrow">Blog NUVORA</span>
+    <h1>Silencio, comodidad<br>y estilo</h1>
+    <p>Artículos pensados para quienes valoran el bienestar auditivo, la comodidad de largo alcance y el diseño minimalista aplicado al calzado.</p>
+  </div>
+</section>
+
+<section class="posts">
+  <div class="wrap">
+
+    <article class="post" id="silencio">
+      <div class="post-thumb"><svg viewBox="0 0 400 160"><use href="#ilu-wave"></use></svg></div>
+      <div class="post-body">
+        <h2>El impacto del ruido al caminar en tu bienestar diario</h2>
+        <p>Exploramos cómo el ruido constante de la pisada afecta la concentración, el descanso auditivo y la percepción de los demás en espacios compartidos — y cómo NUVORA lo resuelve desde el diseño de la suela.</p>
+        <span class="tag">Bienestar</span>
+      </div>
+      <a href="articulo-ruido-bienestar.html" class="post-cta">Leer completo →</a>
+    </article>
+
+    <article class="post" id="comodidad">
+      <div class="post-thumb"><svg viewBox="0 0 400 200"><use href="#ilu-sole"></use></svg></div>
+      <div class="post-body">
+        <h2>Comodidad de largo alcance: la ciencia detrás de la suela NUVORA</h2>
+        <p>Un repaso a la ingeniería de materiales que permite hasta 12 horas de uso continuo sin fatiga plantar, y por qué la amortiguación acústica también reduce el impacto articular.</p>
+        <span class="tag">Producto</span>
+      </div>
+      <a href="#comodidad" class="post-cta">Próximamente →</a>
+    </article>
+
+    <article class="post" id="minimalismo">
+      <div class="post-thumb"><svg viewBox="0 0 520 260"><use href="#ilu-shoe"></use></svg></div>
+      <div class="post-body">
+        <h2>Minimalismo funcional: por qué el rojo y negro de NUVORA no es casualidad</h2>
+        <p>La teoría del color aplicada a la identidad de marca: cómo el contraste rojo-negro comunica precisión, energía contenida y confianza sin recurrir al ruido visual.</p>
+        <span class="tag">Diseño</span>
+      </div>
+      <a href="#minimalismo" class="post-cta">Próximamente →</a>
+    </article>
+
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© 2026 NUVORA · Blog oficial</div>
+</footer>
+
+</body>
+</html>

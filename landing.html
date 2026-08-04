@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NUVORA — Sé el primero en caminar en silencio | 15% de lanzamiento</title>
+<meta name="description" content="Reserva tu par NUVORA antes del lanzamiento oficial y obtén 15% de descuento exclusivo. Cupos limitados.">
+<!-- ============================================================
+     KLAVIYO — Onsite JS
+     company_id: W9Hk5X
+============================================================= -->
+<script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/W9Hk5X/klaviyo.js?company_id=W9Hk5X"></script>
+<script type="text/javascript">
+//Initialize Klaviyo object on page load
+!function(){if(!window.klaviyo){window._klOnsite=window._klOnsite||[];try{window.klaviyo=new Proxy({},{get:function(n,i){return"push"===i?function(){var n;(n=window._klOnsite).push.apply(n,arguments)}:function(){for(var n=arguments.length,o=new Array(n),w=0;w<n;w++)o[w]=arguments[w];var t="function"==typeof o[o.length-1]?o.pop():void 0,e=new Promise((function(n){window._klOnsite.push([i].concat(o,[function(i){t&&t(i),n(i)}]))}));return e}}})}catch(n){window.klaviyo=window.klaviyo||[],window.klaviyo.push=function(){var n;(n=window._klOnsite).push.apply(n,arguments)}}}}();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --negro:#0b0b0c; --negro-2:#151517; --rojo:#c1121f; --rojo-vivo:#e5383b;
+    --hueso:#f4f1ea; --gris:#9a9aa0; --linea: rgba(244,241,234,0.14);
+    --font-display:'Bebas Neue',sans-serif; --font-body:'Inter',sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--negro);color:var(--hueso);font-family:var(--font-body);line-height:1.6;}
+  a{color:inherit;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px;}
+  h1,h2{font-family:var(--font-display);text-transform:uppercase;line-height:1.02;}
+
+  .topbar{background:var(--rojo);text-align:center;padding:10px;font-size:.8rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;}
+
+  .landing-hero{
+    min-height:92vh;display:flex;align-items:center;padding:60px 0;
+    background:radial-gradient(circle at 85% 20%, rgba(193,18,31,.28), transparent 55%), var(--negro);
+  }
+  .landing-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;}
+  .eyebrow{color:var(--rojo-vivo);text-transform:uppercase;letter-spacing:.26em;font-size:.75rem;font-weight:700;}
+  .landing-hero h1{font-size:clamp(2.8rem,6vw,4.6rem);margin:16px 0 20px;}
+  .landing-hero p.lead{color:#cfcfd2;font-size:1.1rem;max-width:480px;margin-bottom:30px;}
+
+  .benefits-inline{display:flex;flex-direction:column;gap:12px;margin-bottom:34px;}
+  .benefits-inline div{display:flex;align-items:center;gap:12px;font-size:.95rem;color:var(--hueso);}
+  .check{width:22px;height:22px;border-radius:50%;background:var(--rojo);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:800;}
+
+  .form-card{
+    background:var(--negro-2);border:1px solid var(--linea);border-radius:8px;padding:38px;
+  }
+  .form-card .badge{
+    display:inline-block;background:var(--rojo);color:var(--hueso);font-size:.72rem;font-weight:800;
+    text-transform:uppercase;letter-spacing:.06em;padding:6px 12px;border-radius:20px;margin-bottom:18px;
+  }
+  .form-card h2{font-family:var(--font-body);font-weight:800;text-transform:none;font-size:1.5rem;margin-bottom:8px;}
+  .form-card p.sub{color:var(--gris);font-size:.9rem;margin-bottom:26px;}
+  form{display:flex;flex-direction:column;gap:14px;}
+  input{
+    background:var(--negro);border:1px solid var(--linea);color:var(--hueso);
+    padding:15px 16px;border-radius:4px;font-size:.95rem;font-family:var(--font-body);
+  }
+  input:focus{outline:none;border-color:var(--rojo-vivo);}
+  .btn-submit{
+    background:var(--rojo);color:var(--hueso);border:none;padding:17px;border-radius:4px;
+    font-weight:800;text-transform:uppercase;letter-spacing:.05em;font-size:.9rem;cursor:pointer;
+    transition:background .2s, transform .2s;margin-top:6px;
+  }
+  .btn-submit:hover{background:var(--rojo-vivo);transform:translateY(-2px);}
+  .btn-submit[disabled]{opacity:.55;cursor:progress;transform:none;}
+  .form-error{display:none;font-size:.78rem;color:var(--rojo-vivo);margin-top:2px;}
+  .form-error.show{display:block;}
+  .fine{font-size:.72rem;color:var(--gris);margin-top:12px;text-align:center;}
+  .urgency{
+    display:flex;align-items:center;gap:10px;margin-top:20px;padding:12px 14px;
+    border:1px dashed var(--rojo-vivo);border-radius:4px;font-size:.82rem;color:var(--hueso);
+  }
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--rojo-vivo);animation:pulse 1.4s infinite;}
+  @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.3;}}
+
+  .social-proof{border-top:1px solid var(--linea);padding:60px 0;text-align:center;}
+  .social-proof .stat-row{display:flex;justify-content:center;gap:70px;flex-wrap:wrap;margin-top:30px;}
+  .stat{}
+  .stat b{font-family:var(--font-display);font-size:2.4rem;color:var(--rojo-vivo);display:block;}
+  .stat span{color:var(--gris);font-size:.82rem;text-transform:uppercase;letter-spacing:.04em;}
+
+  .landing-visual{
+    position:relative;aspect-ratio:4/5;border:1px solid var(--linea);border-radius:8px;
+    display:flex;align-items:center;justify-content:center;overflow:hidden;
+    background:radial-gradient(circle at 50% 35%, #1a1a1c, #0b0b0c 75%);
+    padding:34px;margin-bottom:22px;
+  }
+  .landing-visual svg{width:100%;height:auto;}
+  .landing-visual .badge-15{
+    position:absolute;top:18px;right:18px;background:var(--rojo);color:var(--hueso);
+    width:64px;height:64px;border-radius:50%;display:flex;flex-direction:column;
+    align-items:center;justify-content:center;font-family:var(--font-display);
+    line-height:.95;box-shadow:0 8px 20px rgba(193,18,31,.4);
+  }
+  .landing-visual .badge-15 b{font-size:1.3rem;}
+  .landing-visual .badge-15 span{font-size:.55rem;text-transform:uppercase;letter-spacing:.04em;}
+
+  @media(max-width:900px){
+    .landing-grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<svg style="position:absolute;width:0;height:0;overflow:hidden;" aria-hidden="true">
+<defs>
+  <symbol id="ilu-shoe" viewBox="0 0 520 260">
+    <path d="M78,183 C 68,160 70,125 88,105 C 95,97 105,92 118,90 C 130,86 145,84 160,86 C 185,90 205,88 225,82 C 260,74 300,72 335,76 C 375,82 410,95 435,112 C 452,124 463,138 468,155 C 471,167 470,177 462,183 L 78,183 Z" fill="#141416" stroke="#e5383b" stroke-width="2"/>
+    <path d="M78,183 L462,183 C 478,184 490,190 490,199 C 490,208 478,214 462,214 L 78,214 C 62,214 50,208 50,199 C 50,190 62,184 78,183 Z" fill="#c1121f" stroke="#c1121f" stroke-width="2"/>
+    <g stroke="#f4f1ea" stroke-width="1.5" opacity="0.65">
+      <line x1="170" y1="90" x2="145" y2="140"/>
+      <line x1="190" y1="86" x2="165" y2="136"/>
+      <line x1="210" y1="84" x2="185" y2="132"/>
+      <line x1="230" y1="84" x2="208" y2="128"/>
+    </g>
+    <path d="M400,110 C 420,120 445,135 458,152" fill="none" stroke="#f4f1ea" stroke-width="1" opacity="0.4"/>
+    <g stroke="#0b0b0c" stroke-width="2" opacity="0.5">
+      <line x1="100" y1="198" x2="100" y2="206"/>
+      <line x1="130" y1="200" x2="130" y2="208"/>
+      <line x1="180" y1="201" x2="180" y2="209"/>
+      <line x1="240" y1="202" x2="240" y2="210"/>
+      <line x1="300" y1="202" x2="300" y2="210"/>
+      <line x1="360" y1="201" x2="360" y2="209"/>
+      <line x1="420" y1="199" x2="420" y2="207"/>
+    </g>
+  </symbol>
+</defs>
+</svg>
+
+<div class="topbar">🔥 Reserva anticipada — 15% de descuento exclusivo · Cupos limitados</div>
+
+<section class="landing-hero">
+  <div class="wrap landing-grid">
+    <div>
+      <span class="eyebrow">Lanzamiento oficial NUVORA</span>
+      <h1>Sé de los primeros<br>en caminar en<br>silencio</h1>
+      <p class="lead">Reserva tu par antes del lanzamiento oficial y asegura un 15% de descuento exclusivo, solo disponible para la lista de espera.</p>
+      <div class="benefits-inline">
+        <div><span class="check">✓</span> Reducción de ruido de pisada hasta 90%</div>
+        <div><span class="check">✓</span> Envío prioritario para reservas anticipadas</div>
+        <div><span class="check">✓</span> Acceso a colores exclusivos de preventa</div>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <div class="landing-visual">
+        <svg viewBox="0 0 520 260"><use href="#ilu-shoe"></use></svg>
+        <div class="badge-15"><b>15%</b><span>OFF</span></div>
+      </div>
+      <span class="badge">Oferta de preventa</span>
+      <h2>Reserva tu 15% de descuento</h2>
+      <p class="sub">Déjanos tu correo y sé el primero en saber cuándo abre la preventa.</p>
+      <form id="form-preventa">
+        <input type="text" id="nombre" name="nombre" autocomplete="name" placeholder="Nombre completo" required>
+        <input type="email" id="email" name="email" autocomplete="email" placeholder="Correo electrónico" required>
+        <button type="submit" class="btn-submit" id="btn-preventa">Quiero mi 15% de descuento</button>
+        <p class="form-error" id="form-error" role="alert"></p>
+      </form>
+      <div id="gracias" style="display:none;text-align:center;padding:20px 0;">
+        <h2 style="font-family:'Bebas Neue';font-size:1.6rem;">¡Listo!</h2>
+        <p class="sub">Revisa tu correo: te enviamos la confirmación y tu código de descuento.</p>
+      </div>
+      <div class="urgency"><span class="dot"></span> Quedan pocos cupos para la primera tanda de producción</div>
+      <p class="fine">No enviamos spam. Puedes darte de baja cuando quieras.</p>
+    </div>
+  </div>
+</section>
+
+<section class="social-proof">
+  <div class="wrap">
+    <span class="eyebrow">Antes del lanzamiento</span>
+    <h2 style="margin-top:10px;font-size:1.8rem;">La lista de espera ya está creciendo</h2>
+    <div class="stat-row">
+      <div class="stat"><b>90%</b><span>Menos ruido de pisada</span></div>
+      <div class="stat"><b>12h</b><span>Uso continuo sin fatiga</span></div>
+      <div class="stat"><b>15%</b><span>Descuento de preventa</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     KLAVIYO — Envío del formulario de preventa
+     Usa la Client Subscription API (pensada para el navegador):
+     POST https://a.klaviyo.com/client/subscriptions/
+     El opt-in simple o doble lo decide la configuración de la lista
+     en Klaviyo, no este código.
+============================================================= -->
+<script>
+(function(){
+  // ---------- CONFIGURA ESTO ----------
+  var COMPANY_ID = 'W9Hk5X';                  // Public API Key (el mismo del script del head)
+  var LIST_ID    = 'RcbdjQ';                  // Klaviyo > Audience > Lists > tu lista > Settings > List ID
+  // ------------------------------------
+
+  var form  = document.getElementById('form-preventa');
+  var btn   = document.getElementById('btn-preventa');
+  var error = document.getElementById('form-error');
+  var ok    = document.getElementById('gracias');
+  if (!form) return;
+
+  var textoOriginal = btn.textContent;
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    error.classList.remove('show');
+
+    var nombre = form.nombre.value.trim();
+    var email  = form.email.value.trim();
+    var partes = nombre.split(/\s+/);
+    var first  = partes.shift() || '';
+    var last   = partes.join(' ');
+
+    btn.disabled = true;
+    btn.textContent = 'Enviando…';
+
+    fetch('https://a.klaviyo.com/client/subscriptions/?company_id=' + COMPANY_ID, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'revision': '2024-10-15' },
+      body: JSON.stringify({
+        data: {
+          type: 'subscription',
+          attributes: {
+            custom_source: 'Landing preventa 15% NUVORA',
+            profile: {
+              data: {
+                type: 'profile',
+                attributes: {
+                  email: email,
+                  first_name: first,
+                  last_name: last,
+                  properties: {
+                    'Origen': 'Landing preventa',
+                    'Descuento reservado': '15%'
+                  }
+                }
+              }
+            }
+          },
+          relationships: {
+            list: { data: { type: 'list', id: LIST_ID } }
+          }
+        }
+      })
+    })
+    .then(function(res){
+      if (!res.ok) throw new Error('Klaviyo respondió ' + res.status);
+
+      // Asocia la sesión del navegador con el perfil (tracking onsite)
+      if (window.klaviyo) {
+        window.klaviyo.push(['identify', {
+          '$email': email,
+          '$first_name': first,
+          '$last_name': last
+        }]);
+      }
+
+      form.style.display = 'none';
+      ok.style.display = 'block';
+    })
+    .catch(function(err){
+      console.error('[Klaviyo]', err);
+      error.textContent = 'No pudimos registrar tu correo. Inténtalo de nuevo en unos segundos.';
+      error.classList.add('show');
+      btn.disabled = false;
+      btn.textContent = textoOriginal;
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

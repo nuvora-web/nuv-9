@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NUVORA — Camina en silencio</title>
+<meta name="description" content="NUVORA: zapatos silenciosos de última generación. Amortiguación absoluta, cero ruido, máxima presencia. Descubre la nueva forma de caminar.">
+
+<!-- ============================================================
+     GOOGLE ANALYTICS 4 (GA4)
+     Reemplaza G-XXXXXXXXXX por tu ID de medición real.
+     Instrucciones de configuración en el documento de estrategia,
+     sección "Sitio web / One Page".
+============================================================= -->
+<!--
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+-->
+
+<!-- ============================================================
+     KLAVIYO — Onsite JS (popup / formularios)
+     company_id: W9Hk5X
+     Los popups y formularios se diseñan y publican desde
+     Klaviyo → Sign-up Forms. Este script los inyecta en el sitio.
+============================================================= -->
+<script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/W9Hk5X/klaviyo.js?company_id=W9Hk5X"></script>
+<script type="text/javascript">
+//Initialize Klaviyo object on page load
+!function(){if(!window.klaviyo){window._klOnsite=window._klOnsite||[];try{window.klaviyo=new Proxy({},{get:function(n,i){return"push"===i?function(){var n;(n=window._klOnsite).push.apply(n,arguments)}:function(){for(var n=arguments.length,o=new Array(n),w=0;w<n;w++)o[w]=arguments[w];var t="function"==typeof o[o.length-1]?o.pop():void 0,e=new Promise((function(n){window._klOnsite.push([i].concat(o,[function(i){t&&t(i),n(i)}]))}));return e}}})}catch(n){window.klaviyo=window.klaviyo||[],window.klaviyo.push=function(){var n;(n=window._klOnsite).push.apply(n,arguments)}}}}();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --negro:#0b0b0c;
+    --negro-2:#151517;
+    --rojo:#c1121f;
+    --rojo-vivo:#e5383b;
+    --hueso:#f4f1ea;
+    --gris:#8a8a8f;
+    --linea: rgba(244,241,234,0.12);
+    --font-display: 'Bebas Neue', sans-serif;
+    --font-body: 'Inter', sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--negro);
+    color:var(--hueso);
+    font-family:var(--font-body);
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px;}
+  .eyebrow{
+    font-family:var(--font-body);
+    text-transform:uppercase;
+    letter-spacing:.28em;
+    font-size:.72rem;
+    color:var(--rojo-vivo);
+    font-weight:700;
+  }
+  h1,h2,h3{font-family:var(--font-display);letter-spacing:.01em;text-transform:uppercase;line-height:1;}
+
+  /* ---------- HEADER ---------- */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    background:rgba(11,11,12,.86);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--linea);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 32px;max-width:1180px;margin:0 auto;}
+  .logo{font-family:var(--font-display);font-size:1.6rem;letter-spacing:.08em;}
+  .logo span{color:var(--rojo-vivo);}
+  .nav-links{display:flex;gap:32px;font-size:.85rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;}
+  .nav-links a{opacity:.75;transition:opacity .2s, color .2s;}
+  .nav-links a:hover{opacity:1;color:var(--rojo-vivo);}
+  .nav-cta{
+    background:var(--rojo);color:var(--hueso);padding:10px 20px;font-weight:700;
+    font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;border-radius:2px;
+    transition:background .2s;
+  }
+  .nav-cta:hover{background:var(--rojo-vivo);}
+  .burger{display:none;font-size:1.6rem;background:none;border:none;color:var(--hueso);cursor:pointer;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;min-height:100vh;display:flex;align-items:center;
+    padding-top:90px;
+    background:
+      radial-gradient(circle at 78% 30%, rgba(193,18,31,.25), transparent 55%),
+      linear-gradient(180deg, var(--negro) 0%, var(--negro-2) 100%);
+  }
+  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;width:100%;}
+  .hero h1{font-size:clamp(3.2rem,7vw,6.4rem);}
+  .hero h1 .accent{color:var(--rojo-vivo);}
+  .hero p.lead{font-size:1.15rem;color:#cfcfd2;max-width:480px;margin:22px 0 34px;}
+  .hero-cta-row{display:flex;gap:16px;flex-wrap:wrap;}
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;padding:16px 30px;font-weight:700;
+    text-transform:uppercase;letter-spacing:.06em;font-size:.85rem;border-radius:2px;
+    cursor:pointer;border:none;transition:transform .2s, background .2s, color .2s;
+  }
+  .btn-primary{background:var(--rojo);color:var(--hueso);}
+  .btn-primary:hover{background:var(--rojo-vivo);transform:translateY(-2px);}
+  .btn-outline{background:transparent;color:var(--hueso);border:1px solid var(--linea);}
+  .btn-outline:hover{border-color:var(--rojo-vivo);color:var(--rojo-vivo);}
+
+  .soundwave{display:flex;align-items:flex-end;gap:5px;height:70px;margin-top:38px;}
+  .soundwave i{
+    display:block;width:5px;background:var(--rojo);border-radius:2px;
+    animation:wave 1.8s ease-in-out infinite;
+  }
+  @keyframes wave{
+    0%,100%{height:14px;}
+    50%{height:var(--h,50px);}
+  }
+  .hero-visual{
+    position:relative;aspect-ratio:4/5;border:1px solid var(--linea);border-radius:4px;
+    display:flex;align-items:center;justify-content:center;overflow:hidden;
+    background:radial-gradient(circle at 50% 40%, #1a1a1c, #0b0b0c 75%);
+    padding:30px;
+  }
+  .hero-visual svg{width:100%;height:auto;filter:drop-shadow(0 20px 40px rgba(0,0,0,.5));}
+  .hero-visual .tag{
+    position:absolute;bottom:20px;left:20px;right:20px;
+    display:flex;justify-content:space-between;align-items:center;
+    font-size:.68rem;color:var(--gris);text-transform:uppercase;letter-spacing:.08em;
+  }
+  .hero-visual .tag b{color:var(--rojo-vivo);font-weight:700;}
+
+  section{padding:120px 0;position:relative;}
+  .section-head{max-width:640px;margin-bottom:56px;}
+  .section-head h2{font-size:clamp(2.4rem,4.5vw,3.6rem);margin-top:10px;}
+  .section-head p{color:var(--gris);margin-top:16px;font-size:1.02rem;}
+
+  /* ---------- BENEFICIOS ---------- */
+  #beneficios{background:var(--negro-2);border-top:1px solid var(--linea);border-bottom:1px solid var(--linea);}
+  .benefit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--linea);}
+  .benefit-card{background:var(--negro-2);padding:40px 34px;transition:background .25s;}
+  .benefit-card:hover{background:#1b1b1e;}
+  .benefit-icon{width:44px;height:auto;margin-bottom:18px;}
+  .benefit-card h3{font-size:1.5rem;margin:0 0 12px;}
+  .benefit-card p{color:var(--gris);font-size:.95rem;}
+
+  /* ---------- PRODUCTO / GALERÍA ---------- */
+  .gallery{
+    display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:180px;gap:14px;
+  }
+  .g-item{
+    position:relative;border:1px solid var(--linea);border-radius:4px;overflow:hidden;
+    background:var(--negro-2);display:flex;align-items:center;justify-content:center;
+    transition:border-color .2s, transform .2s;
+  }
+  .g-item:hover{border-color:var(--rojo-vivo);transform:translateY(-3px);}
+  .g-item svg{width:78%;height:78%;}
+  .g-item.wide{grid-column:span 2;}
+  .g-item.tall{grid-row:span 2;}
+  .g-caption{
+    position:absolute;bottom:0;left:0;right:0;padding:10px 14px;
+    background:linear-gradient(0deg, rgba(0,0,0,.75), transparent);
+    font-size:.68rem;text-transform:uppercase;letter-spacing:.07em;color:var(--hueso);
+  }
+  .g-item.flip svg{transform:scaleX(-1);}
+  .gallery-note{margin-top:18px;font-size:.82rem;color:var(--gris);}
+
+  /* ---------- BLOG PREVIEW ---------- */
+  #blog-preview{background:var(--negro-2);border-top:1px solid var(--linea);border-bottom:1px solid var(--linea);}
+  .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+  .blog-card{
+    background:var(--negro);border:1px solid var(--linea);border-radius:4px;overflow:hidden;
+    transition:transform .2s, border-color .2s;
+  }
+  .blog-card:hover{transform:translateY(-4px);border-color:var(--rojo-vivo);}
+  .blog-thumb{height:150px;background:linear-gradient(150deg,#1c1c1f,#0b0b0c);display:flex;align-items:center;justify-content:center;padding:20px;}
+  .blog-thumb svg{width:70%;height:70%;}
+  .blog-card-body{padding:22px;}
+  .blog-card-body h3{font-family:var(--font-body);font-weight:700;font-size:1.05rem;text-transform:none;margin-bottom:8px;}
+  .blog-card-body p{color:var(--gris);font-size:.88rem;margin-bottom:14px;}
+  .blog-link{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--rojo-vivo);}
+
+  /* ---------- CONTACTO ---------- */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
+  .contact-list{display:flex;flex-direction:column;gap:22px;margin-top:28px;}
+  .contact-item{display:flex;align-items:center;gap:16px;padding:18px 20px;border:1px solid var(--linea);border-radius:4px;transition:border-color .2s, background .2s;}
+  .contact-item:hover{border-color:var(--rojo-vivo);background:var(--negro-2);}
+  .contact-icon{
+    width:42px;height:42px;border-radius:50%;background:var(--rojo);
+    display:flex;align-items:center;justify-content:center;font-weight:800;flex-shrink:0;
+  }
+  .contact-item .label{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--gris);}
+  .contact-item .value{font-weight:600;}
+  form.mini-form{display:flex;flex-direction:column;gap:14px;}
+  form.mini-form input, form.mini-form textarea{
+    background:var(--negro-2);border:1px solid var(--linea);color:var(--hueso);
+    padding:14px 16px;border-radius:3px;font-family:var(--font-body);font-size:.92rem;
+  }
+  form.mini-form input:focus, form.mini-form textarea:focus{outline:none;border-color:var(--rojo-vivo);}
+  form.mini-form label{font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--gris);margin-bottom:-6px;}
+
+  /* ---------- FOOTER ---------- */
+  footer{border-top:1px solid var(--linea);padding:48px 0 32px;}
+  .footer-grid{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;}
+  .footer-social{display:flex;gap:18px;}
+  .footer-social a{
+    width:38px;height:38px;border:1px solid var(--linea);border-radius:50%;
+    display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700;
+    transition:border-color .2s, color .2s;
+  }
+  .footer-social a:hover{border-color:var(--rojo-vivo);color:var(--rojo-vivo);}
+  .footer-bottom{margin-top:28px;font-size:.78rem;color:var(--gris);text-align:center;}
+
+  @media(max-width:920px){
+    .hero-grid{grid-template-columns:1fr;}
+    .hero-visual{order:-1;aspect-ratio:16/10;}
+    .benefit-grid{grid-template-columns:1fr;}
+    .gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px;}
+    .g-item.wide{grid-column:span 2;}
+    .blog-grid{grid-template-columns:1fr;}
+    .contact-grid{grid-template-columns:1fr;gap:36px;}
+    .nav-links{display:none;}
+    .nav-links.open{
+      display:flex;flex-direction:column;gap:0;position:absolute;top:100%;left:0;right:0;
+      background:var(--negro-2);border-bottom:1px solid var(--linea);padding:8px 32px 18px;
+    }
+    .nav-links.open a{padding:12px 0;border-bottom:1px solid var(--linea);}
+    .nav-links.open a:last-child{border-bottom:none;}
+    .burger{display:block;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     LIBRERÍA DE ILUSTRACIONES ORIGINALES (SVG, marca NUVORA)
+     Definidas una sola vez y reutilizadas con <use> en todo el sitio.
+============================================================= -->
+<svg style="position:absolute;width:0;height:0;overflow:hidden;" aria-hidden="true">
+<defs>
+
+  <symbol id="ilu-shoe" viewBox="0 0 520 260">
+    <path d="M78,183 C 68,160 70,125 88,105 C 95,97 105,92 118,90 C 130,86 145,84 160,86 C 185,90 205,88 225,82 C 260,74 300,72 335,76 C 375,82 410,95 435,112 C 452,124 463,138 468,155 C 471,167 470,177 462,183 L 78,183 Z" fill="#141416" stroke="#e5383b" stroke-width="2"/>
+    <path d="M78,183 L462,183 C 478,184 490,190 490,199 C 490,208 478,214 462,214 L 78,214 C 62,214 50,208 50,199 C 50,190 62,184 78,183 Z" fill="#c1121f" stroke="#c1121f" stroke-width="2"/>
+    <g stroke="#f4f1ea" stroke-width="1.5" opacity="0.65">
+      <line x1="170" y1="90" x2="145" y2="140"/>
+      <line x1="190" y1="86" x2="165" y2="136"/>
+      <line x1="210" y1="84" x2="185" y2="132"/>
+      <line x1="230" y1="84" x2="208" y2="128"/>
+    </g>
+    <path d="M400,110 C 420,120 445,135 458,152" fill="none" stroke="#f4f1ea" stroke-width="1" opacity="0.4"/>
+    <g stroke="#0b0b0c" stroke-width="2" opacity="0.5">
+      <line x1="100" y1="198" x2="100" y2="206"/>
+      <line x1="130" y1="200" x2="130" y2="208"/>
+      <line x1="180" y1="201" x2="180" y2="209"/>
+      <line x1="240" y1="202" x2="240" y2="210"/>
+      <line x1="300" y1="202" x2="300" y2="210"/>
+      <line x1="360" y1="201" x2="360" y2="209"/>
+      <line x1="420" y1="199" x2="420" y2="207"/>
+    </g>
+  </symbol>
+
+  <symbol id="ilu-wave" viewBox="0 0 400 160">
+    <g fill="#c1121f">
+      <rect x="20" y="55" width="10" height="50" rx="3"/>
+      <rect x="42" y="40" width="10" height="80" rx="3"/>
+      <rect x="64" y="65" width="10" height="30" rx="3"/>
+      <rect x="86" y="30" width="10" height="100" rx="3"/>
+      <rect x="108" y="50" width="10" height="60" rx="3"/>
+    </g>
+    <g fill="#e5383b" opacity="0.55">
+      <rect x="140" y="62" width="9" height="36" rx="3"/>
+      <rect x="160" y="70" width="9" height="20" rx="3"/>
+    </g>
+    <g fill="#8a8a8f" opacity="0.35">
+      <rect x="182" y="75" width="8" height="10" rx="2"/>
+      <rect x="200" y="77" width="7" height="6" rx="2"/>
+    </g>
+    <circle cx="230" cy="80" r="2" fill="#8a8a8f" opacity="0.4"/>
+    <circle cx="255" cy="80" r="2" fill="#8a8a8f" opacity="0.25"/>
+    <circle cx="280" cy="80" r="2" fill="#8a8a8f" opacity="0.12"/>
+  </symbol>
+
+  <symbol id="ilu-sole" viewBox="0 0 400 200">
+    <path d="M40,60 Q200,40 360,60 L360,80 Q200,62 40,80 Z" fill="#e5383b" opacity="0.9"/>
+    <path d="M40,80 Q200,62 360,80 L360,120 Q200,104 40,120 Z" fill="#1d1d1f" stroke="#3a3a3d" stroke-width="1"/>
+    <path d="M40,120 Q200,104 360,120 L360,150 Q200,136 40,150 Z" fill="#c1121f"/>
+    <path d="M40,150 Q200,136 360,150 L360,165 Q200,152 40,165 Z" fill="#141416" stroke="#3a3a3d" stroke-width="1"/>
+    <g stroke="#f4f1ea" stroke-width="0.75" opacity="0.5">
+      <line x1="375" y1="70" x2="390" y2="70"/>
+      <line x1="375" y1="100" x2="390" y2="100"/>
+      <line x1="375" y1="135" x2="390" y2="135"/>
+      <line x1="375" y1="157" x2="390" y2="157"/>
+    </g>
+  </symbol>
+
+  <symbol id="ilu-box" viewBox="0 0 360 300">
+    <path d="M60,90 L180,50 L300,90 L300,220 L180,260 L60,220 Z" fill="#141416" stroke="#e5383b" stroke-width="2"/>
+    <path d="M60,90 L180,130 L300,90" fill="none" stroke="#e5383b" stroke-width="2"/>
+    <line x1="180" y1="130" x2="180" y2="260" stroke="#e5383b" stroke-width="2"/>
+    <rect x="150" y="150" width="60" height="26" rx="2" fill="#c1121f"/>
+    <g stroke="#f4f1ea" stroke-width="1" opacity="0.4">
+      <line x1="90" y1="150" x2="150" y2="163"/>
+      <line x1="90" y1="170" x2="150" y2="180"/>
+    </g>
+  </symbol>
+
+  <symbol id="ic-mute" viewBox="0 0 50 30">
+    <path d="M6,10 L14,10 L24,2 L24,28 L14,20 L6,20 Z" fill="#e5383b"/>
+    <line x1="30" y1="6" x2="44" y2="24" stroke="#e5383b" stroke-width="3"/>
+    <line x1="44" y1="6" x2="30" y2="24" stroke="#e5383b" stroke-width="3"/>
+  </symbol>
+
+  <symbol id="ic-cushion" viewBox="0 0 36 26">
+    <path d="M2,10 Q10,2 18,10 T34,10" stroke="#e5383b" stroke-width="3" fill="none"/>
+    <path d="M2,22 Q10,14 18,22 T34,22" stroke="#e5383b" stroke-width="3" fill="none"/>
+  </symbol>
+
+  <symbol id="ic-mini-shoe" viewBox="0 0 52 36">
+    <path d="M4,26 C2,18 4,10 12,7 C18,4 26,4 34,7 C42,10 48,16 50,23 C51,27 48,29 42,29 L6,29 C4,29 4,28 4,26 Z" fill="#e5383b" opacity="0.9"/>
+    <rect x="2" y="29" width="48" height="5" rx="2.5" fill="#e5383b"/>
+  </symbol>
+
+  <symbol id="ic-leaf" viewBox="0 0 46 38">
+    <path d="M6,34 C6,16 21,2 40,2 C40,22 26,34 6,34 Z" fill="#e5383b"/>
+    <path d="M8,32 L26,14" stroke="#151517" stroke-width="2" opacity="0.6" fill="none"/>
+  </symbol>
+
+  <symbol id="ic-lace" viewBox="0 0 28 16">
+    <path d="M4,12 C4,2 14,2 14,12 C14,2 24,2 24,12" stroke="#e5383b" stroke-width="3" fill="none"/>
+    <circle cx="14" cy="12" r="3" fill="#e5383b"/>
+  </symbol>
+
+  <symbol id="ic-shield" viewBox="0 0 40 43">
+    <path d="M20,2 L38,9 L38,22 C38,32 30,37 20,41 C10,37 2,32 2,22 L2,9 Z" fill="none" stroke="#e5383b" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M11,21 L17,27 L29,13" fill="none" stroke="#e5383b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+
+</defs>
+</svg>
+
+<header>
+  <div class="nav">
+    <a href="#inicio" class="logo">NUV<span>O</span>RA</a>
+    <nav class="nav-links">
+      <a href="#inicio">Inicio</a>
+      <a href="#beneficios">Beneficios</a>
+      <a href="#producto">Producto</a>
+      <a href="#blog-preview">Blog</a>
+      <a href="landing.html">Preventa</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a href="#contacto" class="nav-cta">Contáctanos</a>
+    <button class="burger" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="inicio">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Nueva generación de calzado</span>
+      <h1>Camina en<br><span class="accent">silencio</span> absoluto</h1>
+      <p class="lead">NUVORA elimina el ruido de cada paso mediante una suela de amortiguación acústica patentable. Comodidad total, presencia discreta, diseño minimalista.</p>
+      <div class="hero-cta-row">
+        <a href="#producto" class="btn btn-primary">Ver producto</a>
+        <a href="landing.html" class="btn btn-outline">Reserva tu 15% de descuento</a>
+      </div>
+      <div class="soundwave" aria-hidden="true">
+        <i style="--h:60px"></i><i style="--h:38px"></i><i style="--h:50px"></i>
+        <i style="--h:24px"></i><i style="--h:44px"></i><i style="--h:16px"></i>
+        <i style="--h:10px"></i><i style="--h:6px"></i>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <svg><use href="#ilu-shoe"></use></svg>
+      <div class="tag"><span>NUVORA — Perfil lateral</span><b>—90% ruido</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BENEFICIOS ================= -->
+<section id="beneficios">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Por qué NUVORA</span>
+      <h2>Beneficios que se sienten,<br>no se escuchan</h2>
+      <p>Cada detalle de NUVORA está diseñado para reducir la fricción entre tú y el mundo que te rodea.</p>
+    </div>
+  </div>
+  <div class="benefit-grid">
+    <div class="benefit-card">
+      <svg class="benefit-icon" viewBox="0 0 50 30"><use href="#ic-mute"></use></svg>
+      <h3>Silencio real</h3>
+      <p>Suela de triple capa acústica que reduce el ruido de pisada hasta en un 90% frente al calzado convencional.</p>
+    </div>
+    <div class="benefit-card">
+      <svg class="benefit-icon" viewBox="0 0 36 26"><use href="#ic-cushion"></use></svg>
+      <h3>Confort de largo alcance</h3>
+      <p>Espuma de memoria adaptativa certificada para uso de hasta 12 horas continuas sin fatiga plantar.</p>
+    </div>
+    <div class="benefit-card">
+      <svg class="benefit-icon" viewBox="0 0 52 36"><use href="#ic-mini-shoe"></use></svg>
+      <h3>Diseño minimalista</h3>
+      <p>Líneas limpias en negro y rojo que se adaptan tanto a entornos profesionales como urbanos.</p>
+    </div>
+    <div class="benefit-card">
+      <svg class="benefit-icon" viewBox="0 0 46 38"><use href="#ic-leaf"></use></svg>
+      <h3>Materiales sostenibles</h3>
+      <p>Malla reciclada y adhesivos base agua, reduciendo el impacto ambiental de cada par.</p>
+    </div>
+    <div class="benefit-card">
+      <svg class="benefit-icon" viewBox="0 0 28 16"><use href="#ic-lace"></use></svg>
+      <h3>Ajuste inteligente</h3>
+      <p>Sistema de cordones autoajustables que se adaptan a la forma del pie en segundos.</p>
+    </div>
+    <div class="benefit-card">
+      <svg class="benefit-icon" viewBox="0 0 40 43"><use href="#ic-shield"></use></svg>
+      <h3>Durabilidad certificada</h3>
+      <p>Más de 500km de prueba en superficie mixta sin pérdida de propiedades acústicas.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRODUCTO / GALERÍA ================= -->
+<section id="producto">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Galería</span>
+      <h2>Conoce NUVORA<br>desde todos los ángulos</h2>
+      <p>Ilustraciones originales de marca: perfil del producto, corte de materiales, empaque y el concepto de silencio traducido en imagen.</p>
+    </div>
+    <div class="gallery">
+      <div class="g-item wide">
+        <svg viewBox="0 0 520 260"><use href="#ilu-shoe"></use></svg>
+        <span class="g-caption">Perfil lateral NUVORA</span>
+      </div>
+      <div class="g-item">
+        <svg viewBox="0 0 400 200"><use href="#ilu-sole"></use></svg>
+        <span class="g-caption">Corte de la suela</span>
+      </div>
+      <div class="g-item">
+        <svg viewBox="0 0 400 160"><use href="#ilu-wave"></use></svg>
+        <span class="g-caption">Ondas de silencio</span>
+      </div>
+      <div class="g-item">
+        <svg viewBox="0 0 360 300"><use href="#ilu-box"></use></svg>
+        <span class="g-caption">Empaque minimalista</span>
+      </div>
+      <div class="g-item flip">
+        <svg viewBox="0 0 520 260"><use href="#ilu-shoe"></use></svg>
+        <span class="g-caption">Perfil espejado</span>
+      </div>
+      <div class="g-item wide">
+        <svg viewBox="0 0 400 200"><use href="#ilu-sole"></use></svg>
+        <span class="g-caption">Capas de material — detalle</span>
+      </div>
+    </div>
+    <p class="gallery-note">* Todas las piezas de la galería son ilustraciones vectoriales originales de marca (SVG), livianas y editables directamente en el código sin depender de archivos externos. Para sustituirlas por fotografía real de producto, basta con reemplazar el bloque &lt;svg&gt;&lt;use…&gt;&lt;/svg&gt; correspondiente por una etiqueta &lt;img src="/img/tu-foto.jpg"&gt;.</p>
+  </div>
+</section>
+
+<!-- ================= BLOG PREVIEW ================= -->
+<section id="blog-preview">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Desde el blog</span>
+      <h2>Historias y guías NUVORA</h2>
+      <p>Contenido educativo sobre bienestar, estilo y la ciencia detrás del silencio.</p>
+    </div>
+    <div class="blog-grid">
+      <a href="blog.html#silencio" class="blog-card">
+        <div class="blog-thumb"><svg viewBox="0 0 400 160"><use href="#ilu-wave"></use></svg></div>
+        <div class="blog-card-body">
+          <h3>El impacto del ruido al caminar en tu bienestar diario</h3>
+          <p>Por qué el silencio no es solo confort: es salud auditiva y mental.</p>
+          <span class="blog-link">Leer artículo →</span>
+        </div>
+      </a>
+      <a href="blog.html#comodidad" class="blog-card">
+        <div class="blog-thumb"><svg viewBox="0 0 400 200"><use href="#ilu-sole"></use></svg></div>
+        <div class="blog-card-body">
+          <h3>Comodidad de largo alcance: la ciencia detrás de la suela NUVORA</h3>
+          <p>Cómo la amortiguación acústica también reduce la fatiga plantar.</p>
+          <span class="blog-link">Leer artículo →</span>
+        </div>
+      </a>
+      <a href="blog.html#minimalismo" class="blog-card">
+        <div class="blog-thumb"><svg viewBox="0 0 520 260"><use href="#ilu-shoe"></use></svg></div>
+        <div class="blog-card-body">
+          <h3>Minimalismo funcional: por qué el rojo y negro de NUVORA no es casualidad</h3>
+          <p>El diseño rojo y negro de NUVORA explicado desde la teoría del color.</p>
+          <span class="blog-link">Leer artículo →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACTO ================= -->
+<section id="contacto">
+  <div class="wrap contact-grid">
+    <div>
+      <span class="eyebrow">Hablemos</span>
+      <h2>Ponte en<br>contacto</h2>
+      <div class="contact-list">
+        <a class="contact-item" href="mailto:hola@nuvora.com">
+          <span class="contact-icon">@</span>
+          <span><span class="label">Correo</span><br><span class="value">hola@nuvora.com</span></span>
+        </a>
+        <a class="contact-item" href="https://www.facebook.com/profile.php?id=61592711466084&amp;locale=es_LA" target="_blank" rel="noopener">
+          <span class="contact-icon">f</span>
+          <span><span class="label">Facebook</span><br><span class="value">NUVORA</span></span>
+        </a>
+        <a class="contact-item" href="https://www.instagram.com/nuvora.pu" target="_blank" rel="noopener">
+          <span class="contact-icon">ig</span>
+          <span><span class="label">Instagram</span><br><span class="value">@nuvora.pu</span></span>
+        </a>
+      </div>
+    </div>
+    <div>
+      <form class="mini-form" onsubmit="event.preventDefault(); alert('¡Gracias! Te responderemos en menos de 24 horas.');">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" required placeholder="Tu nombre">
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" required placeholder="tu@correo.com">
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" rows="4" required placeholder="Cuéntanos qué necesitas"></textarea>
+        <button type="submit" class="btn btn-primary" style="margin-top:6px;">Enviar mensaje</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-grid">
+    <a href="#inicio" class="logo">NUV<span>O</span>RA</a>
+    <div class="footer-social">
+      <a href="https://www.facebook.com/profile.php?id=61592711466084&amp;locale=es_LA" target="_blank" rel="noopener">f</a>
+      <a href="https://www.instagram.com/nuvora.pu" target="_blank" rel="noopener">ig</a>
+      <a href="mailto:hola@nuvora.com">@</a>
+    </div>
+  </div>
+  <p class="footer-bottom">© 2026 NUVORA. Todos los derechos reservados. · Camina en silencio.</p>
+</footer>
+
+</body>
+</html>
